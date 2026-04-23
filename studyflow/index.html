@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StudyFlow — Plan, Focus, Progress</title>
+    <meta name="description" content="A calm study planner with tasks, Pomodoro timer, and progress tracking for college students." />
+    <meta name="author" content="Lexie Collier" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <div class="logo">S</div>
+          <div>
+            <h1>StudyFlow</h1>
+            <p class="tagline">Plan · Focus · Progress</p>
+          </div>
+        </div>
+        <p class="quote">“Small steps, every day.”</p>
+      </div>
+    </header>
+
+    <main class="container main">
+      <section class="card overview">
+        <div class="overview-top">
+          <div>
+            <p class="eyebrow">Today</p>
+            <h2 class="display">Keep the <em>flow</em>.</h2>
+            <p class="muted">A calm space to plan your day, track assignments, and run focused study sessions.</p>
+          </div>
+          <div class="stats">
+            <div><p class="stat-value" id="stat-completed">0/0</p><p class="stat-label">Completed</p></div>
+            <div><p class="stat-value" id="stat-due">0</p><p class="stat-label">Due today</p></div>
+            <div><p class="stat-value" id="stat-progress">0%</p><p class="stat-label">Progress</p></div>
+          </div>
+        </div>
+        <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+      </section>
+
+      <div class="grid">
+        <div class="col-tasks">
+          <form id="task-form" class="card task-form">
+            <input id="task-title" type="text" placeholder="What needs to get done?" required />
+            <select id="task-subject">
+              <option>Math</option><option>Science</option><option>History</option>
+              <option>English</option><option>Other</option>
+            </select>
+            <input id="task-due" type="date" required />
+            <button type="submit">+ Add</button>
+          </form>
+
+          <section class="card task-list-card">
+            <div class="task-list-head">
+              <h3 class="display-sm">Your tasks</h3>
+              <div class="controls">
+                <div class="filter-group" id="filter-group">
+                  <button data-filter="all" class="active">All</button>
+                  <button data-filter="active">Active</button>
+                  <button data-filter="done">Done</button>
+                </div>
+                <button id="sort-btn" class="sort-btn">Sort: due</button>
+              </div>
+            </div>
+            <ul id="task-list"></ul>
+            <p id="empty-state" class="empty">Nothing here yet — a fresh page awaits.</p>
+          </section>
+        </div>
+
+        <div class="col-timer">
+          <section class="card timer">
+            <div class="timer-head">
+              <p class="eyebrow light">Pomodoro</p>
+              <div class="mode-group" id="mode-group">
+                <button data-mode="focus" data-seconds="1500" class="active">Focus</button>
+                <button data-mode="short" data-seconds="300">Short break</button>
+                <button data-mode="long" data-seconds="900">Long break</button>
+              </div>
+            </div>
+            <div class="timer-display" id="timer-display">25:00</div>
+            <p class="timer-label" id="timer-label">Focus session</p>
+            <div class="timer-bar"><div id="timer-fill"></div></div>
+            <div class="timer-actions">
+              <button id="start-btn" class="btn-primary">▶ Start</button>
+              <button id="reset-btn" class="btn-ghost">↺ Reset</button>
+            </div>
+          </section>
+
+          <section class="card sessions">
+            <p class="eyebrow">Focus sessions</p>
+            <p class="display-sm" id="session-count">0</p>
+            <p class="muted small">Completed all-time</p>
+          </section>
+        </div>
+      </div>
+
+      <footer class="footer">StudyFlow · built by Lexie Collier · data saved locally in your browser</footer>
+    </main>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

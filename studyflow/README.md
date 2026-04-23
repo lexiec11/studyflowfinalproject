@@ -1,5 +1,3 @@
-# studyflowfinalproject
-final project OIM3690
 # StudyFlow
 
 StudyFlow is a web-based study planning tool designed for college students who want a simple and effective way to organize assignments, manage their time, and stay focused. The goal is to bring planning, focus, and progress tracking into one clean and easy-to-use interface.
