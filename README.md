@@ -48,14 +48,5 @@ studyflow/
 └── README.md
 ```
 
-## Running Locally
-Just open `index.html` in your browser — no build step required.
-
-## Deploying to GitHub Pages
-1. Push the project to a GitHub repository.
-2. Go to **Settings → Pages**.
-3. Under *Source*, select the `main` branch and `/ (root)` folder.
-4. Save — your site will be live at `https://<username>.github.io/<repo>/`.
-
 ## Author
 Lexie Collier
